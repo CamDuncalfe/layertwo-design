@@ -1,0 +1,224 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><title>LayerTwo Sample</title><meta content="width=device-width, initial-scale=1" name="viewport"/><link href="/assets/css/styles.css" rel="stylesheet" type="text/css"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous"/><script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script><script type="text/javascript">WebFont.load({  google: {    families: ["Geist Mono:300,400,500,600,700","Manrope:300,400,500,600,700"]  }});</script><script src="https://use.typekit.net/ooa7jhy.js" type="text/javascript"></script><script type="text/javascript">try{Typekit.load();}catch(e){}</script><link href="/assets/images/icon-32.png" rel="shortcut icon" type="image/x-icon"/><link href="/assets/images/icon-256.png" rel="apple-touch-icon"/><style>
+/* fluid typography */
+body {
+  min-height: 0vw;
+  font-size: calc(0.7264957264957266vw + 0.40865384615384615em);
+  -webkit-font-smoothing: antialiased;   /* Chrome / Safari */
+  -moz-osx-font-smoothing: grayscale;    /* Firefox on macOS */
+  text-rendering: optimizeLegibility;    /* Improves kerning & ligatures */
+}
+/* Max Font Size */
+@media screen and (min-width:1700px) {
+ body { font-size: 1.1805555555555558em; }
+}
+/* Min Font Size */
+@media screen and (min-width: 390px) and (max-width: 1439px)  {
+ body { font-size: calc(0.19065776930409914vw + 0.8285271687321258em); }
+}
+@media screen and (max-width:389px) {
+  body { font-size: 0.8748808388941849em; }
+}
+
+.scroll-wrap, .nav-shadow {
+  pointer-events: none;
+}
+
+/* Selection Styles */
+::selection{
+background-color: rgba(63, 73, 81, 0.50);
+color: #fff;
+-webkit-text-fill-color: #DCE4F1;
+-webkit-text-stroke-color: transparent;
+}
+
+.fancy-button {
+  -webkit-mask-image: -webkit-radial-gradient(white, black); /* Optional mask for Safari clipping */
+}
+
+</style><!-- ==================  WORK CAROUSEL  ================== -->
+<style>
+/* Hide overflow so the duplicate row never appears */
+.work-carousel{
+  overflow:hidden;
+  position:relative;
+}
+
+/* One long, GPU-pinned row that scrolls left forever */
+.slider{
+  display:flex;
+  flex-wrap:nowrap;
+  animation:scroll-x 40s linear infinite;
+  will-change:transform;
+  transform:translateZ(0);          /* keep layer on GPU */
+}
+
+/* Slides never shrink, spacing stays predictable */
+.slide{ flex:0 0 auto; }
+
+/* Move left by one full copy (-50 %) per cycle */
+@keyframes scroll-x{
+  0%   { transform:translateX(0); }
+  100% { transform:translateX(-50%); }
+}
+</style></head><body class="body"><div role="banner" class="navbar w-nav"><div class="nav-container w-container"><a href="/" class="brand w-nav-brand"><div class="logo"><svg width="100%" height="100%" viewBox="0 0 2705 743" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2479.97 577.846C2366.39 577.846 2288.53 493.555 2288.53 384.263C2288.53 274.971 2366.39 190.68 2479.97 190.68C2593.55 190.68 2671.41 274.971 2671.41 384.263C2671.41 493.555 2593.55 577.846 2479.97 577.846ZM2479.97 503.556C2539.26 503.556 2572.83 455.696 2572.83 384.263C2572.83 312.83 2539.26 264.256 2479.97 264.256C2419.97 264.256 2387.11 312.83 2387.11 384.263C2387.11 455.696 2419.97 503.556 2479.97 503.556Z" fill="white"/>
+<path d="M1870.31 567.132L1763.16 200.681H1859.6L1903.88 370.691C1911.74 400.693 1920.31 439.267 1920.31 439.267H1921.74C1921.74 439.267 1929.6 399.979 1937.46 369.977L1983.18 200.681H2066.04L2113.9 369.977C2121.75 400.693 2131.04 439.267 2131.04 439.267H2132.47C2132.47 439.267 2141.04 400.693 2148.9 370.691L2195.33 200.681H2289.62L2180.33 567.132H2091.75L2043.18 387.121C2035.32 357.833 2026.75 323.546 2026.75 323.546H2025.32C2025.32 323.546 2016.03 357.833 2008.18 387.121L1958.17 567.132H1870.31Z" fill="white"/>
+<path d="M1529.81 264.971V200.681H1580.52V86.3887H1675.53V200.681H1738.39V264.971H1675.53V459.268C1675.53 486.412 1690.53 495.699 1711.96 495.699C1724.1 495.699 1740.53 494.984 1740.53 494.984V566.417C1740.53 566.417 1718.39 567.846 1679.82 567.846C1632.67 567.846 1580.52 549.273 1580.52 479.983V264.971H1529.81Z" fill="white"/>
+<path d="M1398.04 200.681V259.256H1400.18C1422.32 217.825 1447.32 196.395 1490.18 196.395C1500.9 196.395 1507.33 197.109 1513.04 199.252V284.257H1510.9C1447.32 277.828 1401.61 311.402 1401.61 388.549V567.131H1304.46V200.681H1398.04Z" fill="white"/>
+<path d="M1095.2 577.846C973.763 577.846 905.188 492.841 905.188 383.549C905.188 274.971 978.763 190.68 1085.91 190.68C1203.78 190.68 1266.64 280.686 1266.64 411.408H1000.91C1008.05 467.84 1039.48 502.842 1094.48 502.842C1132.34 502.842 1154.49 485.698 1165.2 457.839H1260.92C1247.35 522.843 1189.49 577.846 1095.2 577.846ZM1087.34 265.685C1035.91 265.685 1010.91 296.401 1002.34 344.261H1165.2C1162.35 297.829 1131.63 265.685 1087.34 265.685Z" fill="white"/>
+<path d="M593.439 687.139V610.706H627.727C666.301 610.706 682.016 590.704 682.016 560.703C682.016 540.701 674.873 517.129 654.157 461.411L555.58 200.681H657.729L712.018 365.691C723.447 399.264 735.591 445.696 735.591 445.696H737.019C737.019 445.696 747.02 399.264 758.449 365.691L809.881 200.681H907.744L779.879 576.418C752.02 657.851 724.876 687.139 650.586 687.139H593.439Z" fill="white"/>
+<path d="M453.733 567.131C448.018 559.988 444.446 542.844 442.303 526.414H440.875C422.302 554.273 395.872 575.703 333.011 575.703C258.007 575.703 205.146 536.415 205.146 463.554C205.146 382.835 270.865 357.119 352.298 345.689C413.016 337.117 440.875 332.117 440.875 304.258C440.875 277.828 420.159 260.684 379.443 260.684C333.726 260.684 311.581 277.114 308.724 312.116H222.29C225.148 247.826 273.008 191.395 380.157 191.395C490.163 191.395 534.452 240.683 534.452 326.403V512.842C534.452 540.701 538.738 557.131 547.31 563.56V567.131H453.733ZM356.584 507.842C412.302 507.842 443.018 473.554 443.018 437.838V382.834C425.874 392.835 399.444 398.55 375.157 404.264C324.439 415.694 299.438 427.123 299.438 461.411C299.438 495.698 322.296 507.842 356.584 507.842Z" fill="white"/>
+<path d="M69.0391 567.131V56.3867H166.188V567.131H69.0391Z" fill="white"/>
+</svg></div></a><div class="w-nav-button"><div class="w-icon-nav-menu"></div></div><nav role="navigation" class="main-nav-links w-nav-menu"><a href="https://recent.layertwo.design/" target="_blank" class="nav-item w-nav-link">Recent Work</a><a href="/lets-chat" class="nav-button w-button">Book a Quick Call</a></nav><nav role="navigation" class="nav-menu w-nav-menu"><a data-smart-anchor="pricing" href="#pricing" class="nav-item w-nav-link">Pricing</a><a data-smart-anchor="faq" href="#faq" class="nav-item w-nav-link">FAQ</a></nav></div></div><div class="noise fixed"></div><section class="main-section shadow-long"><div class="w-layout-blockcontainer container w-container"><div class="main"><div class="top-hero"><div class="layertwo-sample-cards"><div class="mini-dash-card _1"><img sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="/assets/images/sample-brand-500.png 500w, /assets/images/sample-brand.avif 2576w" alt="" src="/assets/images/sample-brand.avif" loading="lazy" class="mini-dash-card-img"/></div><div class="mini-dash-card _2"><img loading="lazy" src="/assets/images/2-compressed.gif" alt="" class="mini-dash-card-img"/></div><div class="mini-dash-card _3"><img sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="/assets/images/sample-ux-500.avif 500w, /assets/images/sample-ux-800.avif 800w, /assets/images/sample-ux.avif 1812w" alt="" src="/assets/images/sample-ux.avif" loading="lazy" class="mini-dash-card-img"/></div></div><h1>Get a Sample</h1><div class="text-lg-reg">One high-impact design in <span><strong><em class="fancy color-yellow">under 48 hours</em></strong>.</span> <br/>No fluff. Just great design.</div></div><div class="inline-form"><div class="inline-form-container w-form"><form id="wf-form-LayerTwo-Sample" name="wf-form-LayerTwo-Sample" data-name="LayerTwo Sample" redirect="https://buy.stripe.com/14k7tBfbZ0Ek3wA3ce" data-redirect="https://buy.stripe.com/14k7tBfbZ0Ek3wA3ce" method="get" class="inline-form-large"><label for="name" class="label-lg">Your Name</label><input class="input lg w-input" maxlength="256" name="name" data-name="Name" placeholder="" type="text" id="name"/><label for="email" class="label-lg">Email Address</label><input class="input lg w-input" maxlength="256" name="email" data-name="Email" placeholder="" type="email" id="email" required=""/><label for="Project-Title" class="label-lg">Project Title</label><input class="input lg w-input" maxlength="256" name="Project-Title" data-name="Project Title" placeholder="" type="text" id="Project-Title" required=""/><div class="separator"></div><label for="deliverable" class="label-lg">Project Type</label><div class="sample-items"><label class="sample-item w-radio"><div class="w-form-formradioinput w-form-formradioinput--inputType-custom radio-button w-radio-input"></div><input type="radio" name="Project-Type" id="Logo-Design" data-name="Project Type" style="opacity:0;position:absolute;z-index:-1" value="Logo Design"/><img loading="lazy" src="/assets/images/sample-logo.gif" alt="" class="mini-dash-image"/><div class="radio-text">A clean, one-shot logo with plus bonus exploration (typography &amp; supporting brand elements..</div><span class="label-lg sample w-form-label" for="Logo-Design">Logo Design</span></label><label class="sample-item w-radio"><div class="w-form-formradioinput w-form-formradioinput--inputType-custom radio-button w-radio-input"></div><input type="radio" name="Project-Type" id="Web-Design" data-name="Project Type" style="opacity:0;position:absolute;z-index:-1" value="Web Design"/><img sizes="(max-width: 767px) 96vw, (max-width: 991px) 708px, 920px" srcset="/assets/images/sample-web-500.avif 500w, /assets/images/sample-web-800.avif 800w, /assets/images/sample-web.avif 1600w" alt="" src="/assets/images/sample-web.avif" loading="lazy" class="mini-dash-image"/><span class="label-lg sample w-form-label" for="Web-Design">Web Design</span><div class="radio-text">A clean, high-impact desktop design including a hero section, layout, styling, and visual direction.</div></label><label class="sample-item w-radio"><div class="w-form-formradioinput w-form-formradioinput--inputType-custom radio-button w-radio-input"></div><input type="radio" name="Project-Type" id="Brand-Strategy-Kickstart" data-name="Project Type" style="opacity:0;position:absolute;z-index:-1" value="Brand Strategy Kickstart"/><img sizes="(max-width: 767px) 96vw, (max-width: 991px) 708px, 920px" srcset="/assets/images/sample-brand-500.png 500w, /assets/images/sample-brand.avif 2576w" alt="" src="/assets/images/sample-brand.avif" loading="lazy" class="mini-dash-image"/><span class="label-lg sample w-form-label" for="Brand-Strategy-Kickstart">Brand Strategy</span><div class="radio-text">We&#x27;ll kickstart a brand strategy, delivering as much as we can within the 48hr window giving you a glimpse of where your brand can go.</div></label><label class="sample-item w-radio"><div class="w-form-formradioinput w-form-formradioinput--inputType-custom radio-button w-radio-input"></div><input type="radio" name="Project-Type" id="Mobile-App-Redesign" data-name="Project Type" style="opacity:0;position:absolute;z-index:-1" value="Mobile App Redesign"/><img loading="lazy" src="/assets/images/work-11.avif" alt="" class="mini-dash-image"/><span class="label-lg sample w-form-label" for="Mobile-App-Redesign">Mobile App</span><div class="radio-text">Up to 5 screens. We&#x27;ll redesign and elevate your mobile app to get you a polished MVP. Focused on layout, UI elements, and great UX.</div></label><label class="sample-item w-radio"><div class="w-form-formradioinput w-form-formradioinput--inputType-custom radio-button w-radio-input"></div><input type="radio" name="Project-Type" id="Slide-Deck-Makeover" data-name="Project Type" style="opacity:0;position:absolute;z-index:-1" value="Slide Deck Makeover"/><img sizes="(max-width: 767px) 96vw, (max-width: 991px) 708px, 920px" srcset="/assets/images/sample-deck-500.avif 500w, /assets/images/sample-deck-800.avif 800w, /assets/images/sample-deck-1080.avif 1080w, /assets/images/sample-deck.avif 1692w" alt="" src="/assets/images/sample-deck.avif" loading="lazy" class="mini-dash-image"/><span class="label-lg sample w-form-label" for="Slide-Deck-Makeover">Slide Deck</span><div class="radio-text">A tight redesign of up to 5 slides for a cleaner, more professional and compelling deck.</div></label><label class="sample-item w-radio"><div class="w-form-formradioinput w-form-formradioinput--inputType-custom radio-button w-radio-input"></div><input type="radio" name="Project-Type" id="UX-Review" data-name="Project Type" style="opacity:0;position:absolute;z-index:-1" value="UX Review"/><img sizes="(max-width: 767px) 96vw, (max-width: 991px) 708px, 920px" srcset="/assets/images/sample-ux-500.avif 500w, /assets/images/sample-ux-800.avif 800w, /assets/images/sample-ux.avif 1812w" alt="" src="/assets/images/sample-ux.avif" loading="lazy" class="mini-dash-image"/><span class="label-lg sample w-form-label" for="UX-Review">UX REVIEW</span><div class="radio-text">We&#x27;ll audit your product or site and give you clear, actionable tips to improve flow, clarity, and user experience.</div></label><label class="sample-item w-radio"><div class="w-form-formradioinput w-form-formradioinput--inputType-custom radio-button w-radio-input"></div><input type="radio" name="Project-Type" id="Sticker-or-Icon-Design" data-name="Project Type" style="opacity:0;position:absolute;z-index:-1" value="Sticker or Icon Design"/><img sizes="(max-width: 767px) 96vw, (max-width: 991px) 708px, 920px" srcset="/assets/images/sample-sticker-500.avif 500w, /assets/images/sample-sticker-800.avif 800w, /assets/images/sample-sticker-1080.avif 1080w, /assets/images/sample-sticker.avif 2400w" alt="" src="/assets/images/sample-sticker.avif" loading="lazy" class="mini-dash-image"/><span class="label-lg sample w-form-label" for="Sticker-or-Icon-Design">Sticker or Icon Design</span><div class="radio-text">One custom icon, badge, or sticker-style graphic. Simple, punchy, and production-ready.</div></label><label class="sample-item w-radio"><div class="w-form-formradioinput w-form-formradioinput--inputType-custom radio-button w-radio-input"></div><input type="radio" name="Project-Type" id="Sticker-or-Icon-Design" data-name="Project Type" style="opacity:0;position:absolute;z-index:-1" value="Sticker or Icon Design"/><img loading="lazy" src="/assets/images/custom.avif" alt="" class="mini-dash-image"/><span class="label-lg sample w-form-label" for="Sticker-or-Icon-Design">Custom Request</span><div class="radio-text">We'll scope your custom request to fit the $500 tier.If it's too big, we'll simplify it for best impact.</div></label></div></form><div class="success-message w-form-done"><div class="h4 success">Thanks!</div><div class="text-lg-reg">Once we receive payment we&#x27;ll reach out to you with next steps.</div><div class="separator"></div><div class="text-lg-reg fancy">Redirecting you to pay...</div></div><div class="error-message w-form-fail"><div class="icon-text"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="currentColor" app="ikonik" class="error-icon"><path d="M12 2l.642 .005l.616 .017l.299 .013l.579 .034l.553 .046c4.687 .455 6.65 2.333 7.166 6.906l.03 .29l.046 .553l.041 .727l.006 .15l.017 .617l.005 .642l-.005 .642l-.017 .616l-.013 .299l-.034 .579l-.046 .553c-.455 4.687 -2.333 6.65 -6.906 7.166l-.29 .03l-.553 .046l-.727 .041l-.15 .006l-.617 .017l-.642 .005l-.642 -.005l-.616 -.017l-.299 -.013l-.579 -.034l-.553 -.046c-4.687 -.455 -6.65 -2.333 -7.166 -6.906l-.03 -.29l-.046 -.553l-.041 -.727l-.006 -.15l-.017 -.617l-.004 -.318v-.648l.004 -.318l.017 -.616l.013 -.299l.034 -.579l.046 -.553c.455 -4.687 2.333 -6.65 6.906 -7.166l.29 -.03l.553 -.046l.727 -.041l.15 -.006l.617 -.017c.21 -.003 .424 -.005 .642 -.005zm.01 13l-.127 .007a1 1 0 0 0 0 1.986l.117 .007l.127 -.007a1 1 0 0 0 0 -1.986l-.117 -.007zm-.01 -8a1 1 0 0 0 -.993 .883l-.007 .117v4l.007 .117a1 1 0 0 0 1.986 0l.007 -.117v-4l-.007 -.117a1 1 0 0 0 -.993 -.883z" app="ikonik"></path><path stroke="none" d="M0 0h24v24H0z" fill="none" app="ikonik"></path></svg><div class="text-xs-reg no-margin">Oops! Something went wrong while submitting the form.</div></div></div><div class="form-bottom"><div class="icon-text"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="currentColor" app="ikonik" class="ikonik-fap0ff lg"><path d="M12 2l.642 .005l.616 .017l.299 .013l.579 .034l.553 .046c4.687 .455 6.65 2.333 7.166 6.906l.03 .29l.046 .553l.041 .727l.006 .15l.017 .617l.005 .642l-.005 .642l-.017 .616l-.013 .299l-.034 .579l-.046 .553c-.455 4.687 -2.333 6.65 -6.906 7.166l-.29 .03l-.553 .046l-.727 .041l-.15 .006l-.617 .017l-.642 .005l-.642 -.005l-.616 -.017l-.299 -.013l-.579 -.034l-.553 -.046c-4.687 -.455 -6.65 -2.333 -7.166 -6.906l-.03 -.29l-.046 -.553l-.041 -.727l-.006 -.15l-.017 -.617l-.004 -.318v-.648l.004 -.318l.017 -.616l.013 -.299l.034 -.579l.046 -.553c.455 -4.687 2.333 -6.65 6.906 -7.166l.29 -.03l.553 -.046l.727 -.041l.15 -.006l.617 -.017c.21 -.003 .424 -.005 .642 -.005zm.01 13l-.127 .007a1 1 0 0 0 0 1.986l.117 .007l.127 -.007a1 1 0 0 0 0 -1.986l-.117 -.007zm-.01 -8a1 1 0 0 0 -.993 .883l-.007 .117v4l.007 .117a1 1 0 0 0 1.986 0l.007 -.117v-4l-.007 -.117a1 1 0 0 0 -.993 -.883z" app="ikonik"></path><path stroke="none" d="M0 0h24v24H0z" fill="none" app="ikonik"></path></svg><div class="icon-text-text"><div class="text-lg-red">The LayerTwo Sample is one-shot with no revisions so we can focus on great design at a low price.</div></div></div><a id="mini-submit" href="#" target="_blank" class="form-submission mini form inline w-inline-block"><div class="h5 no-margin mini">Submit &amp; Pay</div><div class="label-xl no-margin">$500</div><div class="btn-inner-shadow mini"></div><div class="fancy-btn-glow mini"><svg width="100%" height="100%" viewBox="0 0 667 468" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="100%" height="100%" fill="#0B0B0B"/>
+<g style="mix-blend-mode:plus-lighter" filter="url(#filter0_f_461_12300)">
+<path d="M574.5 282.5C493.162 323.492 164.85 387.635 130.748 319.969C96.6456 252.302 134.938 164.216 216.276 123.224C297.614 82.2318 391.197 103.856 425.299 171.522C459.402 239.189 655.838 241.508 574.5 282.5Z" fill="url(#paint0_radial_461_12300)"/>
+</g>
+<g style="mix-blend-mode:plus-lighter" filter="url(#filter1_f_461_12300)">
+<path d="M324.159 196.143C316.656 196.473 310.351 198.613 303.938 201.473C307.498 203.002 311.01 204.908 314.416 206.694C320.724 210.002 326.699 212.508 333.426 213.985C342.676 216.016 352.054 216.307 361.073 220.322C369.994 224.294 378.03 228.867 385.68 235.496C392.045 241.013 398.677 245.9 405.232 251.139C408.472 253.728 411.954 255.984 414.804 259.134L414.974 259.321C419.544 264.372 424.085 269.39 429.23 273.738C434.658 278.324 440.202 282.837 445.915 286.952C450.486 290.245 455.123 292.731 458.746 297.428C462.481 302.271 465.989 307.213 469.522 312.217C473.172 317.386 476.567 323.611 481.477 327.497C486.707 331.635 488.425 325.287 489.573 321.045L489.615 320.89C490.171 318.841 490.886 317.089 488.978 315.274C487.185 313.568 485.694 312.494 484.349 310.219C481.886 306.053 479.234 302.097 476.537 298.113C473.35 293.407 469.622 289.327 466.209 284.801C458.76 274.923 449.22 266.419 439.93 258.767C429.571 250.233 420.261 240.141 409.74 231.774C398.477 222.817 388.3 212.913 376.22 205.357C369.72 201.292 363.264 199.89 356.256 199.069C345.469 197.807 334.893 195.67 324.159 196.143Z" fill="white"/>
+</g>
+<g style="mix-blend-mode:plus-lighter" opacity="0.5" filter="url(#filter2_f_461_12300)">
+<path d="M359.282 195.538C373.784 199.507 388.491 203.531 406.133 211.565C406.281 212.057 406.414 212.48 406.393 212.68C406.279 213.781 410.119 217.766 412.562 219.828C414.09 221.117 415.834 222.241 417.994 223.634L418.117 223.713C419.856 224.834 422.659 226.368 424.587 227.433C426.262 228.359 426.824 229.133 428.119 230.046C431.963 232.755 431.346 233.559 430.999 234.586C430.181 237.003 428.209 238.935 426.431 240.839C424.993 242.379 423.297 245.237 413.647 240.192C404.05 235.174 394.612 229.822 385.204 224.553C379.391 221.298 373.982 217.922 368.237 214.517C362.54 211.141 342.583 200.91 341.016 197.802C338.354 192.52 349.066 192.742 359.095 195.487L359.282 195.538Z" fill="white"/>
+</g>
+<defs>
+<filter id="filter0_f_461_12300" x="48.1052" y="32.2946" width="616.137" height="387.406" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="35.09" result="effect1_foregroundBlur_461_12300"/>
+</filter>
+<filter id="filter1_f_461_12300" x="253.61" y="152.372" width="280.312" height="220.172" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="21.8514" result="effect1_foregroundBlur_461_12300"/>
+</filter>
+<filter id="filter2_f_461_12300" x="315.517" y="168.493" width="140.834" height="99.6451" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="12.5443" result="effect1_foregroundBlur_461_12300"/>
+</filter>
+<radialGradient id="paint0_radial_461_12300" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(278.024 245.746) rotate(153.253) scale(164.922 137.202)">
+<stop offset="0.283654" stop-color="#C5E9FF"/>
+<stop offset="0.432692" stop-color="#00A0FF"/>
+<stop offset="0.649038" stop-color="#1100FF"/>
+<stop offset="0.769231" stop-color="#1100FF"/>
+<stop offset="0.870192" stop-color="#D12BFF"/>
+</radialGradient>
+</defs>
+</svg></div></a><div class="code-embed-2"><script>
+  document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('mini-submit').addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector('form').requestSubmit();
+    });
+  });
+</script></div></div></div></div></div></div></section><section class="bottom-section"><div class="w-layout-blockcontainer container w-container"><div class="faq-book animat"><div id="faq" class="faq-container"><h3 class="h5">Frequently Asked Questions</h3><div class="fs_accordion-1_component"><div class="fs_accordion-1_embed"><!-- [Finsweet Attributes] A11Y -->
+<script>(()=>{var t="https://cdn.jsdelivr.net/npm/@finsweet/attributes-a11y@1/a11y.js",e=document.querySelector(`script[src="${t}"]`);e||(e=document.createElement("script"),e.async=!0,e.src=t,document.head.append(e));})();</script></div><div class="fs_accordion-1_item"><div id="accordion-1-header-1" tabindex="0" role="button" aria-controls="accordion-1-content-1" aria-expanded="false" class="fs_accordion-1_header"><div class="fs_accordion-1_label">What if I just need one design?</div><div class="fs_accordion-1_arrow-wrapper"><div class="fs_accordion-1_icon w-icon-dropdown-toggle"></div></div></div><div id="accordion-1-content-1" aria-labelledby="accordion-header-1" class="fs_accordion-1_content"><div class="fs_accordion-1_body"><p class="text-sm-reg">Even if you only need one request, LayerTwo can still be a great fit. We'll deliver your design quickly, and you're free to pause or cancel afterward. No long-term commitment required.</p></div></div></div><div class="fs_accordion-1_item"><div id="accordion-1-header-2" tabindex="0" role="button" aria-controls="accordion-1-content-2" aria-expanded="false" class="fs_accordion-1_header"><div class="fs_accordion-1_label">How fast will I receive my designs?</div><div class="fs_accordion-1_arrow-wrapper"><div class="fs_accordion-1_icon w-icon-dropdown-toggle"></div></div></div><div id="accordion-1-content-2" aria-labelledby="accordion-header-2" class="fs_accordion-1_content"><div class="fs_accordion-1_body"><p class="text-sm-reg">Most requests are completed within 48 hours depending on complexity. You'll always be kept in the loop with updates and previews as we go.</p></div></div></div><div class="fs_accordion-1_item"><div id="accordion-1-header-2" tabindex="0" role="button" aria-controls="accordion-1-content-2" aria-expanded="false" class="fs_accordion-1_header"><div class="fs_accordion-1_label"><strong>What's the onboarding process like?</strong></div><div class="fs_accordion-1_arrow-wrapper"><div class="fs_accordion-1_icon w-icon-dropdown-toggle"></div></div></div><div id="accordion-1-content-2" aria-labelledby="accordion-header-2" class="fs_accordion-1_content"><div class="fs_accordion-1_body"><p class="text-sm-reg">Once you sign up, you'll get instant access to your own private channel in our Slack. From there, you can submit your first request and we'll guide you through anything you need—super simple and personalized.</p></div></div></div><div class="fs_accordion-1_item"><div id="accordion-1-header-2" tabindex="0" role="button" aria-controls="accordion-1-content-2" aria-expanded="false" class="fs_accordion-1_header"><div class="fs_accordion-1_label"><strong>Who's actually doing the work?</strong></div><div class="fs_accordion-1_arrow-wrapper"><div class="fs_accordion-1_icon w-icon-dropdown-toggle"></div></div></div><div id="accordion-1-content-2" aria-labelledby="accordion-header-2" class="fs_accordion-1_content"><div class="fs_accordion-1_body"><p class="text-sm-reg">LayerTwo is run by Erick and Cam, two seasoned creative professionals with deep experience in branding, product design, and digital. We've designed for startups, agencies, and some of the most recognizable brands.</p></div></div></div><div class="fs_accordion-1_item"><div id="accordion-1-header-2" tabindex="0" role="button" aria-controls="accordion-1-content-2" aria-expanded="false" class="fs_accordion-1_header"><div class="fs_accordion-1_label"><strong>Is there a limit to design requests?</strong></div><div class="fs_accordion-1_arrow-wrapper"><div class="fs_accordion-1_icon w-icon-dropdown-toggle"></div></div></div><div id="accordion-1-content-2" aria-labelledby="accordion-header-2" class="fs_accordion-1_content"><div class="fs_accordion-1_body"><p class="text-sm-reg">You can submit as many requests as you like. We work through them one at a time in a queue, so you'll always know what's in progress and what's next.</p></div></div></div><div class="fs_accordion-1_item"><div id="accordion-1-header-2" tabindex="0" role="button" aria-controls="accordion-1-content-2" aria-expanded="false" class="fs_accordion-1_header"><div class="fs_accordion-1_label">How does the pause feature work?</div><div class="fs_accordion-1_arrow-wrapper"><div class="fs_accordion-1_icon w-icon-dropdown-toggle"></div></div></div><div id="accordion-1-content-2" aria-labelledby="accordion-header-2" class="fs_accordion-1_content"><div class="fs_accordion-1_body"><p class="text-sm-reg">Pause your subscription at any time and we&#x27;ll honour the unused amount of service days remaining to be used anytime in the future, no stress. Just send us a message and we&#x27;ll keep track of the remaining days for you.</p></div></div></div><div class="fs_accordion-1_item"><div id="accordion-1-header-2" tabindex="0" role="button" aria-controls="accordion-1-content-2" aria-expanded="false" class="fs_accordion-1_header"><div class="fs_accordion-1_label"><strong>What tools do you design with?</strong></div><div class="fs_accordion-1_arrow-wrapper"><div class="fs_accordion-1_icon w-icon-dropdown-toggle"></div></div></div><div id="accordion-1-content-2" aria-labelledby="accordion-header-2" class="fs_accordion-1_content"><div class="fs_accordion-1_body"><p class="text-sm-reg">We primarily use Figma, but are well-versed in many other industry-standard tools like Webflow, Framer and Adobe Creative Suite.</p></div></div></div><div class="fs_accordion-1_item"><div id="accordion-1-header-2" tabindex="0" role="button" aria-controls="accordion-1-content-2" aria-expanded="false" class="fs_accordion-1_header"><div class="fs_accordion-1_label">How does Webflow development work?</div><div class="fs_accordion-1_arrow-wrapper"><div class="fs_accordion-1_icon w-icon-dropdown-toggle"></div></div></div><div id="accordion-1-content-2" aria-labelledby="accordion-header-2" class="fs_accordion-1_content"><div class="fs_accordion-1_body"><p class="text-sm-reg">We offer high fidelity Webflow development for designs created by us—or even ones you already have. Clean, responsive, and built to scale.<br/>Once development is complete, we&#x27;ll transfer the website ownership over to you.<br/><br/>We&#x27;re also happy to maintain your website for you under your LayerTwo subscription. Just submit your requests the same as you would submit a design request.</p></div></div></div><div class="fs_accordion-1_item"><div id="accordion-1-header-2" tabindex="0" role="button" aria-controls="accordion-1-content-2" aria-expanded="false" class="fs_accordion-1_header"><div class="fs_accordion-1_label"><strong>How do I request a design?</strong></div><div class="fs_accordion-1_arrow-wrapper"><div class="fs_accordion-1_icon w-icon-dropdown-toggle"></div></div></div><div id="accordion-1-content-2" aria-labelledby="accordion-header-2" class="fs_accordion-1_content"><div class="fs_accordion-1_body"><p class="text-sm-reg">The easiest way to send in a request is through your private Slack channel — set up just for you. But we're flexible. Whether it's a Notion doc, Google Drive folder, Loom video, or even a quick DM, we'll work with whatever format feels natural to you.</p></div></div></div><div class="fs_accordion-1_item"><div id="accordion-1-header-2" tabindex="0" role="button" aria-controls="accordion-1-content-2" aria-expanded="false" class="fs_accordion-1_header"><div class="fs_accordion-1_label">What if I&#x27;m not loving the design?</div><div class="fs_accordion-1_arrow-wrapper"><div class="fs_accordion-1_icon w-icon-dropdown-toggle"></div></div></div><div id="accordion-1-content-2" aria-labelledby="accordion-header-2" class="fs_accordion-1_content"><div class="fs_accordion-1_body"><p class="text-sm-reg">No stress. LayerTwo is built on collaboration. We'll refine the work based on your feedback until it's exactly what you're looking for.</p></div></div></div><div class="fs_accordion-1_item"><div id="accordion-1-header-2" tabindex="0" role="button" aria-controls="accordion-1-content-2" aria-expanded="false" class="fs_accordion-1_header"><div class="fs_accordion-1_label"><strong>Are there any design services you don't offer?</strong></div><div class="fs_accordion-1_arrow-wrapper"><div class="fs_accordion-1_icon w-icon-dropdown-toggle"></div></div></div><div id="accordion-1-content-2" aria-labelledby="accordion-header-2" class="fs_accordion-1_content"><div class="fs_accordion-1_body"><p class="text-sm-reg">There are a few things we don't cover. That said, we're always happy to provide creative direction and help manage external teams if needed. Just let us know what you're thinking and we'll figure it out together.<br/><br/>We don&#x27;t offer the following services:</p><ul role="list"><li><p class="text-sm-reg">3D modeling</p></li><li><p class="text-sm-reg">Motion or animated graphics (GIFs, etc.)</p></li><li><p class="text-sm-reg">Document design (like medical forms)</p></li><li><p class="text-sm-reg">Long-form or high-volume print (magazines, books, etc.)</p></li><li><p class="text-sm-reg">Complex packaging</p></li><li><p class="text-sm-reg">Adobe InDesign projects<br/></p></li></ul></div></div></div><div class="fs_accordion-1_item"><div id="accordion-1-header-2" tabindex="0" role="button" aria-controls="accordion-1-content-2" aria-expanded="false" class="fs_accordion-1_header"><div class="fs_accordion-1_label">Are there any refunds?</div><div class="fs_accordion-1_arrow-wrapper"><div class="fs_accordion-1_icon w-icon-dropdown-toggle"></div></div></div><div id="accordion-1-content-2" aria-labelledby="accordion-header-2" class="fs_accordion-1_content"><div class="fs_accordion-1_body"><p class="text-sm-reg">Because of the nature of creative work and the time involved, we don't offer refunds. But we're committed to making sure you love what you get.</p></div></div></div></div></div><div id="book" class="book"><div class="lets-chat"><a href="https://x.com/camduncalfe" target="_blank" class="pfp md w-inline-block"><img src="/assets/images/cam-pfp.avif" loading="lazy" alt="" class="pfp-img"/></a><a href="https://x.com/Erick_Nicolay_" target="_blank" class="pfp md w-inline-block"><img src="/assets/images/erick-pfp.avif" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="/assets/images/erick-pfp-500.avif 500w, /assets/images/erick-pfp.avif 1112w" alt="" class="pfp-img"/></a></div><div class="space-md"></div><div class="book-content faq"><div class="book-text"><h3 class="no-margin">Let&#x27;s Chat</h3><div class="text-md-reg">A 15 minute call to discuss your needs.</div></div></div><div class="space-md"></div><a href="/lets-chat" class="button btn-lg light-mode full w-button">Book a Call</a></div></div><div class="footer"><div id="w-node-_9ce28470-f89d-5697-2ca8-2889c6e98cc2-c6e98cc1" class="footer-copyright"><div class="label-sm">LayerTwo Design ©2026</div></div><div class="footer-links label-sm"><a href="/terms-conditions" class="footer-link">Terms &amp; Conditions</a></div><div class="footer-right"><a href="mailto:hello@layertwodesign.com?subject=Hello!" class="label-sm footer-link no-margin">hello@LayerTwodesign.com</a></div></div></div></section><div class="yellow-blur"></div><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" type="text/javascript"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const homePath = "/";
+
+  document.querySelectorAll("[data-smart-anchor]").forEach((link) => {
+    link.addEventListener("click", function (e) {
+      const id = this.getAttribute("data-smart-anchor");
+      if (!id) return;
+
+      const target = document.getElementById(id);
+
+      // Case 1: target exists on this page, scroll here
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: "smooth" });
+
+        // Optional: update the URL hash without jumping
+        history.pushState(null, "", `#${id}`);
+        return;
+      }
+
+      // Case 2: target is not on this page, go home then scroll
+      e.preventDefault();
+      window.location.href = `${homePath}#${id}`;
+    });
+  });
+});
+</script><script>
+/* Duplicate the slide row once → seamless loop */
+document.addEventListener('DOMContentLoaded',()=>{
+  const track = document.getElementById('workSlider');
+  if(track && !track.dataset.cloned){          // guard against re-runs
+    track.innerHTML += track.innerHTML;        // add one copy
+    track.dataset.cloned = '1';
+  }
+});
+</script>
+
+
+<!-- Typing effect with blink-only-when-idle -->
+<style>
+  #dash-cursor{
+    display:inline-block;
+    animation:dashBlink .8s steps(1) infinite;
+    margin-left: -0.18em;
+    transform: translateY(-0.05em)
+  }
+  /* stop-blinking helper */
+  #dash-cursor.no-blink{ animation:none; opacity:1; }
+
+  @keyframes dashBlink{50%{opacity:0;}}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const words = [
+    'startups',
+    'vibe-coders',
+    'entrepreneurs',
+    'product teams',
+    'marketing squads',
+    'solo founders',
+    'growth hackers'
+  ];
+
+  const target = document.querySelector('.perfect-for .color-yellow');
+  if(!target) return;
+  target.textContent = '';                        // clean slate
+
+  const cursor = document.createElement('span');  // blinking |
+  cursor.id = 'dash-cursor';
+  cursor.textContent = '|';
+  target.after(cursor);
+
+  const typeSpeed  = 120;  // ms per char
+  const eraseSpeed = 40;   // ms per backspace
+  const holdDelay  = 1500; // ms word stays on-screen
+
+  let w = 0, c = 0;        // indices: word, char
+
+  function blink(on){      // toggle blink animation
+    cursor.classList.toggle('no-blink', !on);
+  }
+
+  function type(){
+    blink(false);
+    if(c < words[w].length){
+      target.textContent += words[w][c++];
+      setTimeout(type, typeSpeed);
+    } else {
+      blink(true);                       // idle blink
+      setTimeout(erase, holdDelay);
+    }
+  }
+
+  function erase(){
+    blink(false);
+    if(c){
+      target.textContent = words[w].substring(0, --c);
+      setTimeout(erase, eraseSpeed);
+    }else{
+      w = (w + 1) % words.length;        // next word
+      setTimeout(type, typeSpeed);
+    }
+  }
+
+  type();                                // kick things off
+});
+</script></body></html>
